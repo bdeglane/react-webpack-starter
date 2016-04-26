@@ -1,0 +1,13 @@
+@import "../../../style/variable";
+
+.item {
+  list-style-type: none;
+  background: $dark;
+  margin: 0 0 14px 0;
+  padding: 10px;
+  a {
+    text-decoration: none;
+    color: $light;
+    font-weight: bold;
+  }
+}
