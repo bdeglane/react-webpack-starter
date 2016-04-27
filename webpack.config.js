@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
         app: path.join(__dirname, 'app', 'main.js'),
-        // vendor: ['jquery', 'bootstrap-sass', 'd3']
+        vendor: ['react', 'react-dom']
     },
     output: {
         path: path.join(__dirname, 'dist', 'js'),
@@ -49,7 +49,7 @@ module.exports = {
         new ExtractTextPlugin('../style/style.css', {
             allChunks: true
         }),
-        // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
     ],
     stats: {
         // Nice colored output
